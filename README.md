@@ -24,6 +24,7 @@ usando **as mesmas 2 ferramentas** (calculadora + anotações) e o **mesmo loop*
 | [`02-langchain-langgraph`](02-langchain-langgraph/) | **LangChain + LangGraph** | Depois do 01 | O mesmo agente como um **grafo de estados**; o ecossistema mais usado do mercado |
 | [`03-google-adk`](03-google-adk/) | **Google ADK** (Agent Development Kit) | Depois do 01 | Framework do Google com **callbacks nativos** (`before_model`, `after_tool`...) e Runner |
 | [`04-multiagente`](04-multiagente/) | **Time multi-agente** (nas 3 stacks) | Quando quiser escalar | **Planejador · Executor · Revisor** + camada de prompt + **A2A** + **arquitetura de segurança** (anti prompt-injection) |
+| [`05-gerador-de-sites`](05-gerador-de-sites/) | **Aplicação real** (multi-agente) | Pra ver agente *construindo* algo | Um time que **gera um site** (HTML/CSS) e itera até ficar bom — prova de que agente não é só chatbot |
 
 Cada pasta tem o **seu próprio README, setup e dependências**. São independentes:
 você instala e roda um sem afetar os outros.
