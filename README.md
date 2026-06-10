@@ -26,6 +26,14 @@ usando **as mesmas 2 ferramentas** (calculadora + anotações) e o **mesmo loop*
 | [`04-multiagente`](04-multiagente/) | **Time multi-agente** (nas 3 stacks) | Quando quiser escalar | **Planejador · Executor · Revisor** + camada de prompt + **A2A** + **arquitetura de segurança** (anti prompt-injection) |
 | [`05-gerador-de-sites`](05-gerador-de-sites/) | **Aplicação real** (multi-agente) | Pra ver agente *construindo* algo | Um time que **gera um site** (HTML/CSS) e itera até ficar bom — prova de que agente não é só chatbot |
 
+### 🖼️ Exemplo do que dá pra fazer
+
+O [projeto 05](05-gerador-de-sites/) é um time de agentes que **gera um site sozinho**.
+Esta página abaixo saiu 100% dos agentes (planejador → executor → revisor), offline,
+sem ninguém escrever HTML à mão:
+
+![Site gerado pelos agentes](05-gerador-de-sites/preview.png)
+
 Cada pasta tem o **seu próprio README, setup e dependências**. São independentes:
 você instala e roda um sem afetar os outros.
 

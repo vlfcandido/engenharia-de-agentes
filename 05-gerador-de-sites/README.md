@@ -4,6 +4,11 @@ Este projeto pega o **time multi-agente** do [projeto 04](../04-multiagente/) e 
 aponta para uma tarefa **concreta e visual**: **gerar um site**. É a prova de que
 agente serve pra *construir coisas*, não só conversar.
 
+> 👇 **Este site abaixo foi gerado 100% pelo time de agentes** (planejador →
+> executor → revisor), rodando offline. Nenhuma linha de HTML foi escrita à mão:
+
+![Preview do site gerado pelos agentes](preview.png)
+
 - **Planejador** decide as seções da página.
 - **Executor** escreve os arquivos `index.html` + `style.css` de verdade (no sandbox).
 - **Revisor** confere; se faltar seção (ex.: contato), **manda refazer** — e o
