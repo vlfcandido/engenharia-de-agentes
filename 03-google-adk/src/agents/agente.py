@@ -14,6 +14,7 @@ from google.genai import types
 
 from core import callbacks
 from core.config import Settings, settings as settings_global
+from prompts import SISTEMA
 from tools.ferramentas import TOOLS
 
 _APP = "agentic-adk"
@@ -31,7 +32,7 @@ class Agente:
         self.agent = LlmAgent(
             name="agente_base",
             model=self.settings.llm_model,
-            instruction="Voce e um assistente que usa as tools disponiveis para resolver a tarefa.",
+            instruction=SISTEMA,  # a camada de prompt (system prompt do ADK)
             tools=TOOLS,
             before_model_callback=before_model,
             after_model_callback=callbacks.log_after_model,

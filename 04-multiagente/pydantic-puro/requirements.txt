@@ -1,0 +1,6 @@
+# Projeto 04 (Pydantic puro) — time multi-agente
+anthropic>=0.40
+pydantic>=2.7
+pydantic-settings>=2.3
+python-dotenv>=1.0
+pytest>=8.0

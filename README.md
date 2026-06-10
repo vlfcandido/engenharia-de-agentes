@@ -1,8 +1,9 @@
-# 🤖 agentic-base — 3 projetos-base pra estudar Engenharia de Agentes
+# 🤖 agentic-base — projetos-base pra estudar Engenharia de Agentes
 
-Bem-vindo! Este repositório tem **três projetos iniciais** com a **mesma
-arquitetura** e o **mesmo exemplo**, cada um numa stack diferente. A ideia é você
-clonar, rodar com **um comando**, e já ter uma base limpa pra seguir o curso
+Bem-vindo! Este repositório tem **projetos-base** com a **mesma arquitetura** e o
+**mesmo exemplo**, cada um numa stack diferente: **3 bases de agente único**
+(01/02/03) e **1 base multi-agente** (04, nas 3 stacks). A ideia é você clonar,
+rodar com **um comando**, e já ter uma base limpa pra seguir o curso
 **[Agentic Engineering Masterclass (INEMA)](https://inematds.github.io/agentic/)**
 e começar a codar seus próprios agentes.
 
@@ -11,7 +12,7 @@ e começar a codar seus próprios agentes.
 
 ---
 
-## 📦 Os 3 projetos
+## 📦 Os projetos
 
 Todos resolvem **a mesma tarefa** ("calcule `(12*8)+5` e salve nas anotações"),
 usando **as mesmas 2 ferramentas** (calculadora + anotações) e o **mesmo loop**
@@ -22,9 +23,16 @@ usando **as mesmas 2 ferramentas** (calculadora + anotações) e o **mesmo loop*
 | [`01-pydantic-puro`](01-pydantic-puro/) | **Python puro + Pydantic** (sem framework) | **Comece por aqui** | Como um agente funciona *por baixo dos panos*: o loop, as tools e os hooks escritos à mão |
 | [`02-langchain-langgraph`](02-langchain-langgraph/) | **LangChain + LangGraph** | Depois do 01 | O mesmo agente como um **grafo de estados**; o ecossistema mais usado do mercado |
 | [`03-google-adk`](03-google-adk/) | **Google ADK** (Agent Development Kit) | Depois do 01 | Framework do Google com **callbacks nativos** (`before_model`, `after_tool`...) e Runner |
+| [`04-multiagente`](04-multiagente/) | **Time multi-agente** (nas 3 stacks) | Quando quiser escalar | **Planejador · Executor · Revisor** + camada de prompt + **A2A** + **arquitetura de segurança** (anti prompt-injection) |
 
 Cada pasta tem o **seu próprio README, setup e dependências**. São independentes:
 você instala e roda um sem afetar os outros.
+
+> **Camada de prompt:** os projetos 01/02/03 já trazem um `src/prompts.py` (system
+> prompt + injeção segura de dados). O **[projeto 04](04-multiagente/)** expande isso
+> numa pasta `prompts/` com um prompt por agente e mostra **onde fica a segurança e o
+> A2A**. É a base pra escalar pra qualquer coisa: codar, code review, chatbot,
+> cadastro, CRM, buscar na web e gerar, criador de sites...
 
 ---
 

@@ -59,7 +59,7 @@ class LLMClient(Protocol):
     """Contrato que todo provedor implementa."""
 
     def completar(
-        self, messages: list[dict[str, Any]], tools: list[dict[str, Any]]
+        self, messages: list[dict[str, Any]], tools: list[dict[str, Any]], sistema: str = ""
     ) -> LLMResponse: ...
 
 
@@ -74,13 +74,14 @@ class AnthropicClient:
         self._model = settings.llm_model or _MODELO_DEFAULT["anthropic"]
 
     def completar(
-        self, messages: list[dict[str, Any]], tools: list[dict[str, Any]]
+        self, messages: list[dict[str, Any]], tools: list[dict[str, Any]], sistema: str = ""
     ) -> LLMResponse:
         resp = self._client.messages.create(
             model=self._model,
             max_tokens=4096,
             messages=messages,
             tools=tools or None,
+            system=sistema or None,  # a camada de prompt (instrucoes confiaveis)
         )
         texto = ""
         tool_calls: list[ToolCall] = []
@@ -117,8 +118,9 @@ class DemoClient:
     """
 
     def completar(
-        self, messages: list[dict[str, Any]], tools: list[dict[str, Any]]
+        self, messages: list[dict[str, Any]], tools: list[dict[str, Any]], sistema: str = ""
     ) -> LLMResponse:
+        # O demo ignora o system prompt (e mockado), mas a assinatura bate com a real.
         resultados = self._tool_results(messages)
         n = len(resultados)
         usage = {"input": 50 + 20 * n, "output": 30}

@@ -15,6 +15,7 @@ from core.config import Settings, settings as settings_global
 from core.hooks import Hooks
 from core.llm import LLMClient, criar_cliente
 from core.loop import rodar_loop
+from prompts import SISTEMA
 from tools.base import Tool, ToolRegistry
 
 
@@ -25,11 +26,13 @@ class Agente:
         settings: Settings | None = None,
         cliente: LLMClient | None = None,
         hooks: Hooks | None = None,
+        sistema: str = SISTEMA,  # a camada de prompt (system prompt)
     ) -> None:
         self.settings = settings or settings_global
         self.cliente = cliente or criar_cliente(self.settings)
         self.hooks = hooks or Hooks()
         self.tools = ToolRegistry()
+        self.sistema = sistema
 
     def adicionar_tool(self, tool: Tool) -> "Agente":
         """Registra uma tool. Retorna self pra encadear chamadas."""
@@ -43,5 +46,6 @@ class Agente:
             tools=self.tools,
             hooks=self.hooks,
             pergunta=pergunta,
+            sistema=self.sistema,
             max_iters=self.settings.max_iters,
         )

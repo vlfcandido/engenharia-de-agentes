@@ -27,9 +27,14 @@ def rodar_loop(
     tools: ToolRegistry,
     hooks: Hooks,
     pergunta: str,
+    sistema: str = "",
     max_iters: int = 10,
 ) -> str:
-    """Roda o loop agentico para uma pergunta e devolve a resposta final em texto."""
+    """Roda o loop agentico para uma pergunta e devolve a resposta final em texto.
+
+    `sistema` e o system prompt (a camada de prompt) — as instrucoes CONFIAVEIS
+    que guiam o agente, separadas da `pergunta` (que pode conter dados do usuario).
+    """
 
     # Historico de mensagens (formato de blocos da Anthropic). Comeca com o usuario.
     messages: list[dict[str, Any]] = [{"role": "user", "content": pergunta}]
@@ -39,7 +44,7 @@ def rodar_loop(
     for i in range(1, max_iters + 1):
         # 1. THINK ------------------------------------------------------------
         hooks.emit("before_model", {"iter": i, "messages": messages})
-        resp = cliente.completar(messages, schemas)
+        resp = cliente.completar(messages, schemas, sistema)
         hooks.emit(
             "after_model",
             {"iter": i, "usage": resp.usage, "stop_reason": resp.stop_reason},
