@@ -1,0 +1,36 @@
+[project]
+name = "agentic-base"
+version = "0.1.0"
+description = "Base de projeto para estudar o curso Agentic Engineering (INEMA) — Python puro + Pydantic"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.40",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+# ============================================================================
+#  NOTA SOBRE UV  (alternativa moderna ao venv + pip)
+# ----------------------------------------------------------------------------
+#  Este projeto usa venv + pip por padrao (igual aos tutoriais do curso).
+#  Se quiser, o `uv` faz a mesma coisa MUITO mais rapido. Instale uma vez:
+#
+#      Windows (PowerShell):
+#      powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+#
+#  E ai, no lugar de "python -m venv" + "pip install":
+#
+#      uv venv                       # cria o .venv
+#      uv pip install -r requirements.txt
+#      uv run python src/main.py     # roda sem precisar ativar o venv
+#
+#  O uv le este pyproject.toml automaticamente. Use se/quando quiser.
+# ============================================================================

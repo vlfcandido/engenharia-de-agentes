@@ -1,0 +1,9 @@
+[project]
+name = "agentic-langgraph"
+version = "0.1.0"
+description = "Agente com LangChain + LangGraph — projeto 02 do repo de estudo do curso INEMA"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

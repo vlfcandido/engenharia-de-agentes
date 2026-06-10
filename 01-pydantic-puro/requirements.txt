@@ -1,0 +1,12 @@
+# ============================================================================
+#  Dependencias BASE — o minimo pra rodar o agente do zero (Python + Pydantic)
+#  Instale com:  pip install -r requirements.txt
+# ============================================================================
+
+anthropic>=0.40          # SDK oficial da Anthropic (Claude) — provedor default
+pydantic>=2.7            # validacao/estrutura de dados (modelos das tools)
+pydantic-settings>=2.3   # le o .env de forma tipada
+python-dotenv>=1.0       # carrega o .env
+
+# Dev / testes
+pytest>=8.0

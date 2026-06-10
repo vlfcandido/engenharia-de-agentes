@@ -1,0 +1,37 @@
+# ============================================================================
+#  Dependencias EXTRAS — NAO instale tudo de uma vez!
+#  Descomente so o que voce for usar conforme avanca nas trilhas do curso.
+#
+#  Instala um grupo:   pip install langchain langgraph     (ex.)
+#  Ou tudo de uma vez: pip install -r requirements-extra.txt   (pesado)
+# ============================================================================
+
+# --- Outros provedores de LLM (Trilha 2.1) ---------------------------------
+# openai>=1.40                 # GPT / Codex / OpenAI Agents SDK
+# google-genai>=0.3            # Gemini
+
+# --- Frameworks de agentes (Trilha 3) --------------------------------------
+# langchain>=0.3
+# langchain-anthropic>=0.2
+# langgraph>=0.2               # grafos de estado
+# crewai>=0.60                 # multi-agente por papeis
+# pyautogen>=0.3               # AutoGen / AG2
+
+# --- Memoria longa / RAG (Trilha 2.3) --------------------------------------
+# faiss-cpu>=1.8               # vector store rapido
+# chromadb>=0.5                # vector store amigavel
+# instructor>=1.4              # saidas estruturadas
+
+# --- Ferramentas / tools (Trilha 2.4) --------------------------------------
+# tavily-python>=0.5           # web search
+
+# --- MCP (Trilha 2.6 / 3.5) ------------------------------------------------
+# mcp>=1.0                     # Model Context Protocol (servidor/cliente)
+
+# --- Observabilidade (Trilha 2.8 / 3.8) ------------------------------------
+# langfuse>=2.50               # tracing/avaliacao de LLM
+# opentelemetry-sdk>=1.27      # OTel -> exporta pra Grafana/Tempo/Jaeger
+# opentelemetry-exporter-otlp>=1.27
+
+# --- Qualidade de codigo ---------------------------------------------------
+# ruff>=0.6                    # linter/formatter rapido

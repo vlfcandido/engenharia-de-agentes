@@ -1,0 +1,7 @@
+# Projeto 03 — Google ADK (Agent Development Kit)
+#   pip install -r requirements.txt
+google-adk>=2.0
+pydantic>=2.7
+pydantic-settings>=2.3
+python-dotenv>=1.0
+pytest>=8.0

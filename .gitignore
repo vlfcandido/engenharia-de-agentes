@@ -1,0 +1,23 @@
+# Ambiente virtual
+.venv/
+venv/
+env/
+
+# Segredos — NUNCA suba o .env pro git
+.env
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Dados gerados pelas tools de exemplo
+anotacoes.txt
+
+# IDE / SO
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
