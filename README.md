@@ -2,6 +2,8 @@
 
 O mesmo agente de IA escrito em três stacks (Python puro com Pydantic, LangChain/LangGraph e Google ADK), mais uma versão multiagente nas três e uma aplicação que usa um time de agentes para gerar um site. Todos rodam offline, sem chave de API, num modo de demonstração.
 
+![Terminal rodando o time multiagente em LangGraph, com o grafo planejador, executor e revisor](docs/prints/engenharia-de-agentes.png)
+
 ## Por que existe
 
 Material de estudo de engenharia de agentes. Comparar frameworks lendo documentação não mostra a diferença real; implementar a mesma tarefa, com as mesmas ferramentas e o mesmo laço (pensar, agir, observar), em cada um deles mostra. A tarefa é sempre a mesma: calcular `(12*8)+5` e salvar o resultado nas anotações, usando duas tools (calculadora e anotações).
