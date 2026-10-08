@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/marca/cabecalho-escuro.svg">
+  <img alt="engenharia-de-agentes" src="docs/marca/cabecalho-claro.svg" width="100%">
+</picture>
+
 # engenharia-de-agentes
 
 O mesmo agente de IA escrito em três stacks (Python puro com Pydantic, LangChain/LangGraph e Google ADK), mais uma versão multiagente nas três e uma aplicação que usa um time de agentes para gerar um site. Todos rodam offline, sem chave de API, num modo de demonstração.
