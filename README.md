@@ -29,6 +29,13 @@ Página gerada pelo projeto 05, em modo offline:
 
 ![Site gerado pelos agentes](05-gerador-de-sites/preview.png)
 
+## O padrão que se repete nos projetos
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/marca/diagrama-escuro.svg">
+  <img alt="Diagrama: o pedido passa por uma barreira contra prompt injection, o agente pensa, usa só ferramentas liberadas num laço com limite de voltas e a saída é validada em Pydantic" src="docs/marca/diagrama-claro.svg" width="100%">
+</picture>
+
 ## Stack
 
 Python 3.10+, Pydantic v2, pydantic-settings, LangGraph 1.x, Google ADK 2.x, pytest. Provedores reais opcionais: Anthropic (projetos 01, 02, 04 e 05) e Gemini (03).
